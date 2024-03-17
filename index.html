@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <div class="admin_page w-[270px] flex flex-col items-center">
+        <img src="./Images/Logo.svg" width="219" height="24" alt="logo" />
+        <div class="text-center mb-[63px] mt-[54px]">
+          <form class="text-center">
+            <div class="profile-pic">
+              <label class="-label" for="file">
+                <span class="glyphicon glyphicon-camera"></span>
+                <span>Change Image</span>
+              </label>
+              <input id="file" type="file" onchange="loadFile(event)" />
+              <img src="./Images/Profilepic.jpg" id="output" width="200" />
+            </div>
+          </form>
+          <p class="font-bold mt-[24px] text-[17px] mb-[10px]">
+            Urakov Komronbek
+          </p>
+          <p class="admin-text font-normal text-[14px]">Admin</p>
+        </div>
+        <div
+          class="student-part flex w-[193px] py-[12px] items-center justify-center gap-[23px] rounded-[4px] mb-[454px]"
+        >
+          <img src="./Images/hat.svg" width="20" height="16" />
+          <span class="font-medium text-[14px]">Students</span>
+        </div>
+        <button
+          onclick="getToLogin()"
+          class="pointer flex w-[91px] items-center justify-between"
+        >
+          <span class="font-medium text-[14px]">Logout</span>
+          <img src="./Images/log-out.svg" width="17" height="17" />
+        </button>
+      </div>
+      <div class="crud-part flex flex-col w-full bg-white h-[100vh]">
+        <div
+          class="flex items-center justify-between w-full py-[12px] pl-[30px] pr-[51px]"
+        >
+          <img src="./Images/caret-circle-down.svg" />
+          <div class="flex">
+            <form>
+              <label class="search-bar-wrap">
+                <input class="search-bar" type="text" placeholder="Search..." />
+                <img src="./Images/search.svg" width="14" height="14" />
+              </label>
+              <ul
+                class="search-list z-0 rigth-0 mx-auto absolute p-[10px]"
+              ></ul>
+            </form>
+            <img src="./Images/notification.svg" />
+          </div>
+        </div>
+        <div class="py-[12px] pl-[30px] pr-[30px]">
+          <div class="flex items-center justify-between mb-[11px]">
+            <h2 class="font-bold text-[22px]">Students list</h2>
+            <div class="flex items-center gap-[30px]">
+              <button onclick="sortFunc(students)" class="sort-btn">
+                <img src="./Images/sort-btn.svg" alt="" />
+              </button>
+              <button class="add-btn">ADD NEW STUDENT</button>
+            </div>
+          </div>
+          <span class="line mb-[22px]"></span>
+          <table class="table">
+            <thead class="thead">
+              <tr class="t-row">
+                <th class="theads mt-[22px] pr-[60px] pl-[130px]"></th>
+                <th class="theads px-[60px] mt-[22px]">Name</th>
+                <th class="theads px-[60px] mt-[22px]">Email</th>
+                <th class="theads px-[60px] mt-[22px]">Phone</th>
+                <th class="theads px-[60px] mt-[22px]">Enroll Number</th>
+                <th class="theads px-[60px] mt-[22px]">Date admission</th>
+                <th class="theads px-[60px] mt-[22px]"></th>
+                <th class="theads mt-[22px] pl-[60px] pr-[130px]"></th>
+              </tr>
+            </thead>
+            <tbody class="tbody translate-y-[20px]"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div id="modal-wrapper" class="modal-wrapper">
+      <div class="modal"></div>
+    </div>
+  </body>
+  <script src="./js/script.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: "#da373d",
+          },
+        },
+      },
+    };
+  </script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+</html>

@@ -1,0 +1,211 @@
+* {
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+body {
+  background-color: #f2eae1;
+  font-family: "Montserrat", sans-serif;
+}
+.admin-text {
+  color: #feaf00;
+}
+.main-wrapper {
+  display: flex;
+}
+.modal-wrapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  backdrop-filter: blur(10px);
+  transform: scale(0);
+}
+.modal {
+  width: 500px;
+  background-color: white;
+  border-radius: 20px;
+  margin: 150px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transform: scale(1);
+  padding: 20px;
+}
+
+.open-modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  backdrop-filter: blur(10px);
+  transform: scale(1);
+}
+.admin_page {
+  padding: 18px 25px 31px;
+}
+.profile-pic-wrap {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 130px;
+  height: 130px;
+}
+.profile-pic-btn {
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  margin-bottom: 20px;
+}
+.student-part {
+  background-color: #feaf00;
+  cursor: pointer;
+}
+
+.search-bar-wrap {
+  border: 1px solid white;
+  border-radius: 8px;
+  display: flex;
+  background: white;
+  padding-right: 14px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin-right: 27px;
+}
+
+.search-bar {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+.add-btn {
+  background-color: #feaf00;
+  padding: 14px 0;
+  width: 199px;
+  color: white;
+  border-radius: 4px;
+}
+.line {
+  display: block;
+  width: full;
+  height: 2px;
+  background-color: #e5e5e5;
+}
+.theads ~ .theads {
+  margin-left: 10px;
+}
+
+.search-list {
+  opacity: 0;
+  transition: all, 0.4s;
+  cursor: pointer;
+  width: 242px;
+  top: 60px;
+  background-color: #feaf00;
+  border-radius: 4px;
+}
+
+.open-list {
+  opacity: 1;
+  display: block;
+  transition: all, 0.4s;
+  cursor: pointer;
+  width: 242px;
+  top: 60px;
+  background-color: #feaf00;
+  border-radius: 4px;
+}
+
+.profile-pic {
+  color: transparent;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.3s ease;
+
+  input {
+    display: none;
+  }
+
+  img {
+    position: absolute;
+    object-fit: cover;
+    width: 130px;
+    height: 130px;
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.35);
+    border-radius: 100px;
+    z-index: 0;
+    
+  }
+
+  .-label {
+    cursor: pointer;
+    height: 130px;
+    width: 130px;
+  }
+
+  &:hover {
+    .-label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 10000;
+      color: rgb(250, 250, 250);
+      transition: background-color 0.2s ease-in-out;
+      border-radius: 100px;
+      margin-bottom: 0;
+    }
+  }
+
+  span {
+    display: inline-flex;
+    padding: 0.2em;
+    height: 2em;
+  }
+}
+.theads {
+  color: #acacac;
+  font-size: 12px;
+  font-weight: 600;
+}
+.add-input-img {
+  position: absolute;
+  object-fit: cover;
+  width: 130px;
+  height: 130px;
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.35);
+  border-radius: 100px;
+  z-index: 0;
+  top: 30px;
+  right: 0;
+  left: 174px;
+}
+
+.inp-WRAPPER {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  
+}
+/* tr {
+  box-shadow: 0 4px 4px 0 rgb(0, 0, 0, 25%);
+} */

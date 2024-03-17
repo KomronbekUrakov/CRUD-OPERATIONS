@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+    <link rel="stylesheet" href="./css/login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <form
+      class="login__form text-center w-[475px] bg-white px-[30px] h-[595px] rounded-[20px]"
+    >
+      <div
+        class="logo-wrapper flex items-center justify-center mb-[43px] pt-[44px]"
+      >
+        <img
+          class="w-[342.5px] h-[39px]"
+          src="./Images/Logo.svg"
+          alt="logo"
+          width="342.5"
+          height="39"
+        />
+      </div>
+      <h2 class="Form__title font-bold text-[22px] text-center mb-[9px]">
+        SIGN IN
+      </h2>
+      <p class="font-normal text-[14px] text-center mb-[49px]">
+        Enter your credentials to access your account
+      </p>
+      <label class="flex flex-col text-start">
+        <span class="input-title font-semibold text-[14px] mb-[9px]"
+          >Email</span
+        >
+        <input
+          name="email"
+          class="form-input p-[15px] rounded-[4px] border-[1px]"
+          type="email"
+          placeholder="Enter your email"
+          required
+          autocomplete="off"
+        />
+      </label>
+      <label class="flex flex-col mt-[20px] text-start">
+        <span class="input-title font-semibold text-[14px] mb-[9px]">
+          Password
+        </span>
+        <input
+          name="password"
+          class="form-input p-[15px] rounded-[4px] border-[1px]"
+          type="password"
+          placeholder="Enter your password"
+          required
+          autocomplete="off"
+        />
+      </label>
+      <button class="login-form-btn w-full rounded-[4px] text-normal">
+        SIGN IN
+      </button>
+    </form>
+    <script src="./js/login.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  </body>
+</html>
